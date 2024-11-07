@@ -1,0 +1,14 @@
+<div class="job-ads-container">
+    <h1>Job Ads</h1>
+    @if(jobs() && jobs().length != 0) {
+    <div class="joblist">
+        @for(job of jobs(); track job.id) {
+            <div class="job" [routerLink]="['/jobAds/' + job.id]" routerLinkActive="router-link-active" >
+                <h2>{{ job.title }} ({{job.id}})</h2>
+                <p>{{ job.textEN }}</p>
+                <button (click)="deleteJob(job.id)" class="redbutton">Delete</button>
+            </div>
+        }
+    </div>
+    }
+</div>

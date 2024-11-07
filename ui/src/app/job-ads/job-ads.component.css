@@ -1,0 +1,24 @@
+.job-ads-container {
+    padding: 20px;
+}
+
+.joblist {
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+.job {
+    background-color: lightgray;
+    border-radius: 15px;
+    border:#555;
+}
+
+.job h2 {
+    padding: 3px;
+}
+
+.redbutton {
+    border-radius: 15px;
+    background-color: red;
+}

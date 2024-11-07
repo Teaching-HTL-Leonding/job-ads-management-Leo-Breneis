@@ -1,0 +1,19 @@
+<div class="detaildjobcontainer">
+    <div class="detailedjob">
+        @if(detailedJob != undefined) {
+            <h2>{{ detailedJob.title }}</h2>
+            <p>{{ displayedtext() }}</p>
+            <input type="text" list="existing-translations" [(ngModel)]="language">
+            <button (click)="translate()">Submit</button>
+
+            @if(detailedJob.translations.length > 0) {
+            <datalist id="existing-translations">
+                @for(translation of detailedJob.translations; track translation.language) {
+                    <option>{{translation.language}}</option>
+                }
+            </datalist>
+            }
+
+        }
+    </div>
+</div>
